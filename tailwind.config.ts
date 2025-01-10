@@ -19,25 +19,46 @@ const config = {
     },
     extend: {
       colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "#000644",
-          light: "#000873", // Um tom mais claro para hover
-          dark: "#000415", // Um tom mais escuro para estados ativos
+          light: "#000873",
+          dark: "#000415",
+          foreground: "hsl(var(--primary-foreground))",
         },
-        white: "#FFFFFF",
-        // Sugestão de tons neutros complementares
-        neutral: {
-          50: "#F8F9FC",
-          100: "#F1F2F9",
-          200: "#E4E6F1",
-          300: "#D1D5E8",
-          400: "#9AA1C8",
-          500: "#6B749E",
-          600: "#4A5075",
-          700: "#363B57",
-          800: "#24273A",
-          900: "#14162B",
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
         },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
         "accordion-down": {
