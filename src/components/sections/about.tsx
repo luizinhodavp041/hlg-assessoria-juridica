@@ -1,6 +1,7 @@
 // src/components/sections/about.tsx
 import { Card } from "@/components/ui/card";
 import { Users, Award, Clock, Trophy } from "lucide-react";
+import Image from "next/image";
 
 const metrics = [
   {
@@ -33,11 +34,13 @@ export function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
           {/* Imagem */}
           <div className="flex justify-center lg:justify-start">
-            <div className="w-full max-w-2xl h-[600px] rounded-3xl bg-neutral-200 overflow-hidden shadow-xl">
-              <img
+            <div className="w-full max-w-2xl h-[600px] rounded-3xl bg-neutral-200 overflow-hidden shadow-xl relative">
+              <Image
                 src="/api/placeholder/800/1200"
                 alt="Placeholder"
-                className="w-full h-full object-cover"
+                fill
+                style={{ objectFit: "cover" }}
+                priority
               />
             </div>
           </div>

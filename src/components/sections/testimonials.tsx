@@ -58,7 +58,7 @@ export function Testimonials() {
                   ))}
                 </div>
                 <blockquote className="text-lg text-neutral-700 mb-6">
-                  "{testimonial.quote}"
+                  &ldquo;{testimonial.quote}&rdquo;
                 </blockquote>
                 <footer>
                   <cite className="not-italic">
