@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export function Header() {
   const [isAtTop, setIsAtTop] = useState(true);
@@ -27,7 +28,14 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-3">
-          <div className="h-8 w-8 rounded-lg bg-white"></div>
+          <div className="h-20 w-20 relative overflow-hidden">
+            <Image
+              src="/icon.jpg"
+              alt="ícone"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
           <span className="text-xl font-bold text-white">
             HLG Assessoria Jurídica
           </span>
