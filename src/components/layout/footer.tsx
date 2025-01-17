@@ -120,11 +120,14 @@ export function Footer() {
               <a
                 href="https://www.tiktok.com/@assessoriajushlg?_t=ZM-8t7wZcAPXuP&_r=1"
                 className="hover:text-neutral-100/80 ml-4"
-                target="blank"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <img
+                <Image
                   src="/tiktok-icon.png"
                   alt="Ícone do TikTok"
+                  width={28}
+                  height={28}
                   className="w-7 h-7"
                 />
               </a>
