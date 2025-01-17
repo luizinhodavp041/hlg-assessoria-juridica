@@ -1,28 +1,28 @@
 // src/components/sections/about.tsx
 import { Card } from "@/components/ui/card";
-import { Users, Award, Clock, Trophy } from "lucide-react";
+import { Users, Award, Trophy, BriefcaseBusiness } from "lucide-react";
 import Image from "next/image";
 
 const metrics = [
   {
-    icon: Users,
-    value: "500+",
-    label: "Clientes Atendidos",
-  },
-  {
-    icon: Award,
-    value: "98%",
-    label: "Taxa de Sucesso",
-  },
-  {
-    icon: Clock,
-    value: "10+",
+    icon: BriefcaseBusiness,
+    value: "3+",
     label: "Anos de Experiência",
   },
   {
     icon: Trophy,
     value: "350+",
     label: "Marcas Registradas",
+  },
+  {
+    icon: Users,
+    value: "160+",
+    label: "Clientes Atendidos",
+  },
+  {
+    icon: Award,
+    value: "98%",
+    label: "Taxa de Sucesso",
   },
 ];
 
@@ -32,21 +32,8 @@ export function About() {
       <div className="container">
         {/* Grid Principal */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-16">
-          {/* Imagem */}
-          <div className="flex justify-center lg:justify-start">
-            <div className="w-full max-w-2xl h-[600px] rounded-3xl bg-neutral-200 overflow-hidden shadow-xl relative">
-              <Image
-                src="/api/placeholder/800/1200"
-                alt="Placeholder"
-                fill
-                style={{ objectFit: "cover" }}
-                priority
-              />
-            </div>
-          </div>
-
           {/* Conteúdo */}
-          <div className="space-y-8">
+          <div className="space-y-8 lg:col-span-2">
             <div>
               <h2 className="text-4xl font-bold text-primary mb-4">
                 Quem Somos
@@ -56,22 +43,77 @@ export function About() {
 
             <div className="space-y-6 text-neutral-600 text-lg">
               <p>
-                Com mais de uma década de experiência no mercado jurídico, a HLG
-                Assessoria Jurídica se consolidou como referência na proteção
-                dos direitos de propriedade intelectual, oferecendo soluções
-                jurídicas inovadoras e personalizadas.
+                A HLG Assessoria está no mercado há mais de 3 anos e se
+                consolidou como referência na proteção de direitos relacionados
+                à propriedade industrial, intelectual, direitos autorais e na
+                assessoria jurídica para empresas. Nosso objetivo é oferecer
+                soluções inovadoras e personalizadas, atendendo às necessidades
+                específicas de cada cliente com eficiência e excelência.
               </p>
               <p>
                 Nossa equipe altamente qualificada combina expertise técnica com
-                um profundo entendimento das necessidades específicas de cada
-                cliente, garantindo resultados excepcionais e duradouros.
+                um profundo entendimento das demandas de nossos clientes. Essa
+                abordagem nos permite alcançar resultados excepcionais e
+                duradouros, sempre alinhados aos objetivos estratégicos de quem
+                confia em nossos serviços.
               </p>
               <p>
-                Nosso compromisso com a excelência e a ética profissional nos
-                permitiu construir relações de confiança duradouras com nossos
-                clientes, contribuindo diretamente para o sucesso de seus
-                projetos e empreendimentos.
+                O compromisso da HLG Assessoria com a ética profissional e a
+                busca contínua pela excelência nos permitiram construir relações
+                de confiança sólidas e duradouras. Acreditamos que essas
+                parcerias são fundamentais para o sucesso dos projetos de nossos
+                clientes, contribuindo diretamente para o crescimento
+                sustentável de suas empresas.
               </p>
+              <p>
+                Conte conosco para proteger e impulsionar o futuro do seu
+                negócio.
+              </p>
+            </div>
+            <div>
+              <h2 className="text-4xl font-bold text-primary mb-4">
+                Nossa Equipe
+              </h2>
+              <div className="w-20 h-1.5 bg-primary rounded-full"></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Sessões dos Sócios */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-16">
+          {/* Sócio 1 */}
+          <div className="space-y-6 text-neutral-600">
+            <div className="relative aspect-square md:aspect-auto md:h-[600px] rounded-2xl overflow-hidden">
+              <Image
+                src="/images/socio1.png"
+                alt="Soluções digitais integradas"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-primary mb-0">
+                Luiz Pereira
+              </h3>
+              <p className="italic">Coordenador Jurídico</p>
+            </div>
+          </div>
+
+          {/* Sócio 2 */}
+          <div className="space-y-6 text-neutral-600">
+            <div className="relative aspect-square md:aspect-auto md:h-[600px] rounded-2xl overflow-hidden">
+              <Image
+                src="/images/socio2.png"
+                alt="Soluções digitais integradas"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-primary mb-0">
+                Henrique Theodoro
+              </h3>
+              <p className="italic">Executivo de Vendas</p>
             </div>
           </div>
         </div>

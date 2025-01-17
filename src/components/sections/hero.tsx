@@ -7,7 +7,7 @@ export function Hero() {
       <div className="container h-full flex flex-col justify-center">
         <div className="max-w-2xl space-y-8">
           <h1 className="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
-            Assessoria Jurídica Especializada Para Seu Negócio
+            A Base Jurídica Que Impulsiona Sua Empresa
           </h1>
 
           <p className="text-lg sm:text-xl text-neutral-100">

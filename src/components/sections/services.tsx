@@ -7,6 +7,10 @@ import {
   Palette,
   BookOpen,
   Shield,
+  Handshake,
+  FileText,
+  Scale,
+  Briefcase,
 } from "lucide-react";
 import {
   Card,
@@ -66,6 +70,33 @@ const services = [
   },
 ];
 
+const legalConsulting = [
+  {
+    icon: Handshake,
+    title: "Acordos",
+    description:
+      "Consultoria especializada para negociações e formulação de acordos jurídicos.",
+  },
+  {
+    icon: FileText,
+    title: "Código de Defesa do Consumidor",
+    description:
+      "Orientação jurídica para proteger os direitos do consumidor e solucionar disputas.",
+  },
+  {
+    icon: Scale,
+    title: "Questões Civis",
+    description:
+      "Soluções jurídicas para disputas e demandas na área civil, como propriedades e contratos.",
+  },
+  {
+    icon: Briefcase,
+    title: "Questões Trabalhistas",
+    description:
+      "Apoio jurídico em direitos trabalhistas e relações de trabalho, garantindo conformidade legal.",
+  },
+];
+
 export function Services() {
   return (
     <section className="py-24 bg-neutral-50" id="servicos">
@@ -82,6 +113,29 @@ export function Services() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
+            <Card key={index} className="hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <service.icon className="w-6 h-6 text-primary" />
+                </div>
+                <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
+                <CardDescription className="text-neutral-600">
+                  {service.description}
+                </CardDescription>
+              </CardHeader>
+            </Card>
+          ))}
+        </div>
+      </div>
+      <div className="container py-24">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl font-bold text-primary mb-4">
+            Consultoria Jurídica nas Áreas
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {legalConsulting.map((service, index) => (
             <Card key={index} className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">

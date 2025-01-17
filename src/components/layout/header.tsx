@@ -22,21 +22,19 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-        isAtTop ? "bg-transparent" : "translate-y-[-100%]"
+        isAtTop ? "bg-primary" : "translate-y-[-100%]"
       }`}
     >
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container flex items-center justify-between py-4">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-3">
-          <div className="h-20 w-20 relative overflow-hidden">
-            <Image
-              src="/icon.jpg"
-              alt="ícone"
-              layout="fill"
-              objectFit="cover"
-            />
+          <div
+            className="relative overflow-hidden"
+            style={{ width: 50, height: 50 }}
+          >
+            <Image src="/icon.png" alt="ícone" fill className="object-cover" />
           </div>
-          <span className="text-xl font-bold text-white">
+          <span className="text-2xl font-bold text-white">
             HLG Assessoria Jurídica
           </span>
         </Link>
